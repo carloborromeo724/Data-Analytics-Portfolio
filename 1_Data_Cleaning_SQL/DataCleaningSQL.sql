@@ -183,7 +183,7 @@ FROM layoffs_staging2
 WHERE total_laid_off is null
 and percentage_laid_off is null;
 
--- Here, we delete the temporary colum "row_num" which was used earlier to remove duplicate entries
+-- Here, we delete the temporary column "row_num" which was used earlier to remove duplicate entries
 Alter table layoffs_staging2
 drop column row_num;
 
