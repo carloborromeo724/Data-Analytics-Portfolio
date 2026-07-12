@@ -53,7 +53,7 @@ The cards show the two headline numbers for the business. Total profit
 came in at 10.45M while total revenue reached 15M, giving an overall 
 picture of how much the bike shop earned and how much it kept after costs.
 
-<img width="62" height="113" alt="image" src="https://github.com/user-attachments/assets/659c960e-2292-472b-97f4-6f17bf280675" />
+<img width="126" height="217" alt="image" src="https://github.com/user-attachments/assets/66cf3939-67f1-4cc8-adbb-1b3875f10ed4" />
 
 ### KPI over Time
 This line and bar chart tracks riders, average profit, and average revenue 
@@ -61,7 +61,7 @@ on a monthly basis across 2021 and 2022. The chart shows a clear seasonal
 pattern where ridership and earnings peak around May to September and dip 
 during the winter months.
 
-<img width="271" height="119" alt="image" src="https://github.com/user-attachments/assets/025ebeef-b166-4e47-ab11-e8def22426a4" />
+<img width="653" height="287" alt="image" src="https://github.com/user-attachments/assets/64bca0bb-754c-42b6-84bf-337c63bfcfce" />
 
 ### Revenue by Season
 This horizontal bar chart breaks down total revenue across the four seasons. 
@@ -69,14 +69,14 @@ Season 3 brings in the most revenue at 4.9M, followed by season 2 at 4.2M
 and season 4 at 3.9M. Season 1 is the weakest performer at 2.2M, which 
 aligns with the seasonal trend seen in the KPI chart.
 
-<img width="164" height="113" alt="image" src="https://github.com/user-attachments/assets/0d969f93-b924-4c8f-9cec-68598e9346d4" />
+<img width="393" height="269" alt="image" src="https://github.com/user-attachments/assets/af71c378-132b-4d9c-821e-4b2a74cc338c" />
 
 ### Rider Demographic
 This donut chart shows the split between registered and casual riders. 
 81.17% of riders are registered users while casual riders make up the 
 remaining 18.83%, telling us that the bike shop has a strong base of 
 loyal recurring customers.
-<img width="155" height="111" alt="image" src="https://github.com/user-attachments/assets/852190bf-c065-4865-9ca9-5e81bb8feee5" />
+<img width="362" height="266" alt="image" src="https://github.com/user-attachments/assets/3e4e1e99-e3e5-4695-ae9f-355d0cddc863" />
 
 ### Revenue by Hour Table
 The table breaks down revenue by hour across the days of the week, which goes through from day 0 (Sunday) to day 6 (Saturday). Sales 
@@ -85,7 +85,7 @@ hours 10 and 14, with hour 11 standing out as one of the stronger
 performing hours across most days. Revenue gradually tapers off as the 
 day moves toward the later evening hours.
 
-<img width="140" height="119" alt="image" src="https://github.com/user-attachments/assets/0c4acdef-0b1b-4372-8814-d52cdc0a6046" />
+<img width="343" height="285" alt="image" src="https://github.com/user-attachments/assets/987d5f1f-a3ee-48ae-bd73-29821fe80111" />
 
 
 ### Profit Margin and Total Number of Riders
