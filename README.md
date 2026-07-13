@@ -10,7 +10,7 @@ This portfolio is a collection of projects covering data cleaning, exploratory a
 ## Projects
 
 ### 1. [Layoffs 2022 Data Cleaning (SQL)](./1_Data_Cleaning_SQL)
-Takes a messy real world dataset of global tech layoffs and cleans it from scratch in MySQL. Covers removing duplicates with `ROW_NUMBER()` and `PARTITION BY`, standardizing inconsistent text entries, converting a text based date column into an actual date type, filling in missing values using self joins, and dropping rows with no usable information. Ends with a clean and analysis-ready table.
+Takes a messy real world dataset of global tech layoffs and cleans it from scratch in MySQL. Covers removing duplicates with `ROW_NUMBER()` and `PARTITION BY`, standardizing inconsistent text entries, converting a text-based date column into an actual date type, filling in missing values using self joins, and dropping rows with no usable information. Ends with a clean and analysis-ready table.
 
 **Skills demonstrated:** data cleaning, window functions, CTEs, self joins, string functions, data type conversion
 
