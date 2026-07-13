@@ -1,4 +1,4 @@
-# Ecommerce Customer Spending Prediction (Python, Linear Regression)
+# E-commerce Customer Spending Prediction (Python, Linear Regression)
 
 This project takes a customer dataset from an online retailer and tries to answer a practical question: should the business put more effort into its mobile app or its website. Rather than going on a hunch, a linear regression model is used to see which platform actually correlates more with revenue.
 
