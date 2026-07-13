@@ -28,13 +28,13 @@ One thing that stood out was looking at companies where percentage_laid_off was 
 
 This is where I started comparing things against each other. I looked at:
 
-Which single layoff event was the biggest (one company, one day).
+- Which single layoff event was the biggest (one company, one day).
 
-Which companies had the highest total layoffs when added up across the whole dataset.
+- Which companies had the highest total layoffs when added up across the whole dataset.
 
-Totals broken down by location, country, industry, and company stage (like Series A or IPO).
+- Totals broken down by location, country, industry, and company stage (like Series A or IPO).
 
-Totals by year, just to see which year hit hardest.
+- Totals by year, just to see which year hit hardest.
 
 **3. The harder queries**
 
@@ -46,22 +46,22 @@ I also wanted to see the trend build up over time instead of just isolated total
 
 A few things stood out to me:
 
-Some companies laid off their entire workforce, mostly early stage startups, even after raising a ton of funding.
+- Some companies laid off their entire workforce, mostly early stage startups, even after raising a ton of funding.
 
-Layoffs weren't evenly spread across years, some years were clearly worse than others.
+- Layoffs weren't evenly spread across years, some years were clearly worse than others.
 
-Certain industries and locations were hit way harder than others, which makes sense given how concentrated tech companies are in specific cities.
+- Certain industries and locations were hit way harder than others, which makes sense given how concentrated tech companies are in specific cities.
 
-The rolling total really shows how layoffs picked up pace over time instead of staying flat.
+- The rolling total really shows how layoffs picked up pace over time instead of staying flat.
 
 ## Things I learned
 
-Starting an EDA with simple queries first really helps you build intuition before jumping into anything complex.
+- Starting an EDA with simple queries first really helps you build intuition before jumping into anything complex.
 
-DENSE_RANK() combined with PARTITION BY is great for getting a top N per group, like top 3 companies per year in this case.
+- DENSE_RANK() combined with PARTITION BY is great for getting a top N per group, like top 3 companies per year in this case.
 
-Wrapping a query in a CTE is a clean way to reuse an aggregated result if you need to run something like a window function on top of it.
+- Wrapping a query in a CTE is a clean way to reuse an aggregated result if you need to run something like a window function on top of it.
 
-Rolling totals give a much better sense of trend over time compared to just looking at raw monthly numbers.
+- Rolling totals give a much better sense of trend over time compared to just looking at raw monthly numbers.
 
 
