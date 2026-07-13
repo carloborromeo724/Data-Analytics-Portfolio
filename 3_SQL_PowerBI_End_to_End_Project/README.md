@@ -24,24 +24,28 @@ The first step before building the dashboard was to prepare the data
 in SQL Server. Here is what was done:
 
 **1. Combined Two Years of Data**
+
 The dataset was split across two separate tables, one for 2021 and 
 one for 2022. A CTE was used along with UNION ALL to stack both tables 
 into one combined result set, making it easier to work with everything 
 in one place.
 
 **2. Joined the Cost Table**
+
 A LEFT JOIN was used to bring in the cost table which contained the 
 price and COGS (Cost of Goods Sold) for each year. This was joined 
 on the year column so that the correct pricing information was matched 
 to each record.
 
 **3. Calculated Revenue and Profit**
+
 Using the riders and price columns, revenue was calculated by 
 multiplying riders by price. Profit was then calculated by subtracting 
 the cost from the revenue. These calculated columns were included 
 directly in the SELECT statement.
 
 **4. Passed the Data to Power BI**
+
 The resulting dataset from the SQL query was connected directly to 
 Power BI where it was used to build the dashboard and visualizations.
 
