@@ -21,7 +21,7 @@ This is a classic beginner regression project, but it's a good one because the b
 
 Python, using pandas and seaborn for exploration, scikit learn for the regression model, and statsmodels for a deeper statistical check on top of that.
 
-## What I did, step by step
+## What I did
 
 **1. Explored the data first**
 
