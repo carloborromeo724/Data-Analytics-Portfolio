@@ -22,7 +22,7 @@ These are the columns in the raw table:
 
 ## Why I did this
 
-Honestly this is one of those beginner projects almost everyone learning SQL ends up doing, but I still learned a lot from it. Real datasets are rarely clean. This one had duplicate rows, inconsistent naming for the same thing, blank values, and a date column that was stored as plain text instead of an actual date. So the goal was to go through a proper cleaning process and end up with a table that's actually usable for analysis.
+Honestly, this is one of those beginner projects almost everyone learning SQL ends up doing, but I still learned a lot from it. Real datasets are rarely clean. This one had duplicate rows, inconsistent naming for the same entry, blank values, and a date column that was stored as plain text instead of an actual date. So the goal was to go through a proper cleaning process and end up with a table that's actually usable for analysis.
 
 ## Tools
 
@@ -42,13 +42,13 @@ The table didn't have any kind of ID column, so I couldn't just check for duplic
 
 This part took a while. Some examples of what I fixed:
 
-Trimmed extra spaces in the company column since some entries had leading or trailing whitespace.
+- Trimmed extra spaces in the company column since some entries had leading or trailing whitespace.
 
-Found a bunch of different versions of "Crypto" as an industry (like Crypto Currency, CryptoCurrency, etc.) and standardized all of them into just "Crypto".
+- Found a bunch of different versions of "Crypto" as an industry (like Crypto Currency, CryptoCurrency, etc.) and standardized all of them into just "Crypto".
 
-Some country entries like "United States." had a trailing period while others didn't, so I cleaned those up too.
+- Some country entries like "United States." had a trailing period while others didn't, so I cleaned those up too.
 
-The date column was stored as text, not an actual date, so I converted it using STR_TO_DATE and then changed the column type to DATE.
+- The date column was stored as text, not an actual date, so I converted it using STR_TO_DATE and then changed the column type to DATE.
 
 **4. Dealt with null and blank values**
 
@@ -64,11 +64,11 @@ After all this, layoffs_staging2 is a clean table with no duplicates, consistent
 
 ## Things I learned
 
-Never clean data directly on the raw table, always work off a copy.
+- Never clean data directly on the raw table, always work off a copy.
 
-ROW_NUMBER with PARTITION BY is honestly such a useful trick for finding duplicates when there's no primary key to rely on.
+- ROW_NUMBER with PARTITION BY is honestly such a useful trick for finding duplicates when there's no primary key to rely on.
 
-Self joins are pretty handy for filling in missing info using other rows in the same table.
+- Self joins are pretty handy for filling in missing info using other rows in the same table.
 
-Only convert data types after you've already cleaned the data, otherwise you'll run into errors trying to convert messy text into a date or number.
+- Only convert data types after you've already cleaned the data, otherwise you'll run into errors trying to convert messy text into a date or number.
 
