@@ -1,4 +1,4 @@
-# End-to-End Data Project: SQL + Power BI
+# End-to-End Data Analytics Project: SQL + Power BI
 # Toman Bike Share Dashboard
 
 ## Overview
