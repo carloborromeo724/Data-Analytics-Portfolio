@@ -1,6 +1,6 @@
 # Data Analytics Portfolio
 
-A collection of projects covering data cleaning, exploratory analysis, dashboard building, and predictive modeling. Each folder is a self contained project with its own README going into more detail, this page is just meant to give a quick overview of what's in here and what each project demonstrates.
+This portfolio is a collection of projects covering data cleaning, exploratory analysis, dashboard building, and predictive modeling. Each folder is a self-contained project with its own README going into more detail. This page is just meant to give a quick overview of what's in here and what each project demonstrates.
 
 ## Tools used across this portfolio
 - **SQL** (MySQL Workbench, SQL Server) for cleaning, transforming, and querying data
@@ -10,7 +10,7 @@ A collection of projects covering data cleaning, exploratory analysis, dashboard
 ## Projects
 
 ### 1. [Layoffs 2022 Data Cleaning (SQL)](./1_Data_Cleaning_SQL)
-Takes a messy real world dataset of global tech layoffs and cleans it from scratch in MySQL. Covers removing duplicates with `ROW_NUMBER()` and `PARTITION BY`, standardizing inconsistent text entries, converting a text based date column into an actual date type, filling in missing values using self joins, and dropping rows with no usable information. Ends with a clean, analysis ready table.
+Takes a messy real world dataset of global tech layoffs and cleans it from scratch in MySQL. Covers removing duplicates with `ROW_NUMBER()` and `PARTITION BY`, standardizing inconsistent text entries, converting a text based date column into an actual date type, filling in missing values using self joins, and dropping rows with no usable information. Ends with a clean and analysis-ready table.
 
 **Skills demonstrated:** data cleaning, window functions, CTEs, self joins, string functions, data type conversion
 
@@ -35,7 +35,7 @@ An end to end project that starts in SQL Server and ends in an interactive Power
 Uses a multiple linear regression model to help an ecommerce company decide whether to focus more on their app or their website. Includes exploratory data analysis, a train/test split, model training with scikit learn, and a deeper statistical check using statsmodels to confirm which features actually matter.
 
 **Key findings:**
-- Length of membership and time spent on the app are the strongest, statistically significant drivers of yearly spend
+- Length of membership and time spent on the app are the strongest and statistically significant drivers of yearly spend
 - Time on the website has almost no effect (coefficient near zero) and isn't statistically significant (p = 0.377)
 - The model explains about 98% of the variation in yearly spend on data it wasn't trained on (R squared of 0.981)
 
