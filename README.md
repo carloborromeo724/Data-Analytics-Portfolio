@@ -31,8 +31,8 @@ An end to end project that starts in SQL Server and ends in an interactive Power
 
 **Skills demonstrated:** SQL joins and CTEs, revenue and profit calculations, Power BI dashboard design, seasonal and hourly trend analysis
 
-### 4. [Ecommerce Customer Spending Prediction (Python, Linear Regression)](./4_Linear_Regression_Python)
-Uses a multiple linear regression model to help an ecommerce company decide whether to focus more on their app or their website. Includes exploratory data analysis, a train/test split, model training with scikit learn, and a deeper statistical check using statsmodels to confirm which features actually matter.
+### 4. [E-commerce Customer Spending Prediction (Python, Linear Regression)](./4_Linear_Regression_Python)
+Uses a multiple linear regression model to help an e-commerce company decide whether to focus more on their app or their website. Includes exploratory data analysis, a train/test split, model training with scikit learn, and a deeper statistical check using statsmodels to confirm which features actually matter.
 
 **Key findings:**
 - Length of membership and time spent on the app are the strongest and statistically significant drivers of yearly spend
