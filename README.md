@@ -14,10 +14,27 @@ Takes a messy real world dataset of global tech layoffs and cleans it from scrat
 
 **Skills demonstrated:** data cleaning, window functions, CTEs, self joins, string functions, data type conversion
 
-### 2. [Layoffs 2022 Exploratory Data Analysis (SQL)](./2_Data_Exploration_SQL)
-Builds on the cleaned dataset from Project 1 and digs into it to find patterns. Starts with simple lookups (biggest single layoff, companies that shut down entirely) and works up to more advanced queries, including ranking the top companies laid off per year using `DENSE_RANK()` with `PARTITION BY`, and calculating a rolling monthly total of layoffs using `SUM() OVER()`.
+Here is the updated Project 2 section:
 
-**Skills demonstrated:** GROUP BY and aggregate functions, CTEs, window functions, ranking, rolling totals
+markdown
+### 2. [Layoffs 2022 Exploratory Data Analysis (SQL)](./2_Data_Exploration_SQL)
+Builds on the cleaned dataset from Project 1 and digs into it to find patterns. 
+Starts with simple lookups like the biggest single layoff event and companies 
+that shut down entirely, then works up to more advanced queries including ranking 
+the top companies laid off per year using `DENSE_RANK()` with `PARTITION BY`, 
+and calculating a rolling monthly total of layoffs using `SUM() OVER()`.
+
+**Key findings:**
+- Google, Meta, and Amazon consistently appear at the top whether looking 
+  at single day events or total layoffs across the whole period
+- 116 companies shut down entirely, including Quibi which had raised close 
+  to 2 billion dollars before closing
+- The US had 256,559 layoffs, with the SF Bay Area alone accounting for 125,631
+- 2022 was the worst year with 160,661 layoffs, compared to just 15,823 in 2021
+- The running total grew from 10,128 in March 2020 to 383,659 by March 2023
+
+**Skills demonstrated:** GROUP BY and aggregate functions, CTEs, window 
+functions, ranking, rolling totals
 
 ### 3. [Toman Bike Share Dashboard (SQL + Power BI)](./3_SQL_PowerBI_End_to_End_Project)
 An end to end project that starts in SQL Server and ends in an interactive Power BI dashboard. Two years of hourly bike share data are combined with `UNION ALL`, joined against a cost table to calculate revenue and profit, then loaded into Power BI to visualize rider trends, seasonality, and profitability.
