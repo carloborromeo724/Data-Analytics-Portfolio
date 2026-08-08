@@ -14,9 +14,7 @@ Takes a messy real world dataset of global tech layoffs and cleans it from scrat
 
 **Skills demonstrated:** data cleaning, window functions, CTEs, self joins, string functions, data type conversion
 
-Here is the updated Project 2 section:
 
-markdown
 ### 2. [Layoffs 2022 Exploratory Data Analysis (SQL)](./2_Data_Exploration_SQL)
 Builds on the cleaned dataset from Project 1 and digs into it to find patterns. 
 Starts with simple lookups like the biggest single layoff event and companies 
