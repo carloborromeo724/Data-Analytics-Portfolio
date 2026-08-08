@@ -55,6 +55,7 @@ cumulative layoffs built up from March 2020 to March 2023.
 ## Key Findings
 
 **Big Tech Dominated the Numbers**
+
 When you look at the top layoff events, it is mostly the same
 names showing up over and over. Google, Meta, and Amazon are
 at the top whether you are looking at single day events or
@@ -63,6 +64,7 @@ companies means that even one round of cuts from them can
 move the overall numbers significantly.
 
 **A Lot of Startups Simply Closed**
+
 116 companies had a percentage_laid_off of 1, meaning they
 did not just downsize, they shut down completely. Some of
 these were not small operations either. Quibi had raised
@@ -70,6 +72,7 @@ close to 2 billion dollars before calling it quits. Clearly
 having a lot of funding does not always mean you make it.
 
 **The US and the Bay Area Took the Biggest Hit**
+
 The United States had 256,559 layoffs, way ahead of every
 other country. Drilling down into locations, the SF Bay Area
 alone accounted for 125,631 of those. Not exactly shocking
@@ -77,6 +80,7 @@ given how much of the tech industry is concentrated there,
 but the numbers are still pretty staggering.
 
 **2022 Was the Worst Year**
+
 2022 had the most layoffs at 160,661, with 2023 not far
 behind at 125,677. Compare that to 2021 which only had
 15,823 and it is clear something shifted. A lot of companies
@@ -84,6 +88,7 @@ over-hired during the pandemic boom and by 2022 they were
 pulling back hard.
 
 **Consumer and Retail Were Hit Hard**
+
 Consumer led all industries with 45,182 layoffs and Retail
 came in second at 43,613. Tech companies tend to get most
 of the attention in layoff news but the data shows the
@@ -91,6 +96,7 @@ impact spread well beyond pure software companies into
 more consumer facing businesses as well.
 
 **Layoffs Grew Steadily Over Time**
+
 The running total started at 10,128 in March 2020 and
 reached 383,659 by March 2023. It was not a sudden spike,
 it just kept building month after month over three years,
