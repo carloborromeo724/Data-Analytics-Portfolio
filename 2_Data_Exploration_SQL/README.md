@@ -1,67 +1,102 @@
-# Layoffs 2022 Exploratory Data Analysis (SQL)
+# Data Exploration with SQL
+# Layoffs 2022 — Exploratory Data Analysis
 
-This is a follow up to my data cleaning project. Once I had a clean version of the Layoffs 2022 dataset, I wanted to actually dig into it and see what kind of trends or patterns show up, so this project is basically me exploring the cleaned table using SQL.
+## Overview
+This project is a follow up to the Data Cleaning project done on
+the same Layoffs 2022 dataset. Now that the data has been cleaned
+and standardized, this project focuses on exploring it using SQL
+to uncover trends and patterns in tech industry layoffs. Starting
+with simple queries to get a feel for the data, then progressively
+moving into more complex aggregations and window functions to answer
+specific questions about which companies, industries, and countries
+were hit the hardest.
+
+## Tools Used
+- SQL (MySQL)
 
 ## Dataset
+- Source: https://www.kaggle.com/datasets/swaptr/layoffs-2022
+- Table used: layoffs_staging2 (the cleaned version from the data cleaning script)
+- Columns: company, location, industry, total_laid_off,
+  percentage_laid_off, date, stage, country
 
-Same dataset as before, from Kaggle here: https://www.kaggle.com/datasets/swaptr/layoffs-2022
+## Steps
 
-I worked off layoffs_staging2, which is the cleaned table from my earlier data cleaning project. Columns are company, location, industry, total_laid_off, percentage_laid_off, date, stage, and country.
+**1. Initial Exploration**
+Started by looking at the full dataset with no specific question
+in mind, just poking around to see what stands out and get ideas
+for what to dig into further.
 
-## Why I did this
+**2. Easy Queries First**
+Looked at the biggest single layoff event and checked the
+percentage_laid_off column to understand how severe each layoff
+was relative to each company's total workforce.
 
-I didn't really start with a specific question in mind. The idea behind EDA is you just start poking around the data and see what jumps out, then once something interesting shows up you dig into it further. So this project starts really simple and gradually gets into more advanced queries as I started asking more specific questions.
+**3. Companies That Completely Shut Down**
+Filtered for companies where percentage_laid_off = 1, meaning
+the entire workforce was laid off. Then sorted by funds raised
+to see how large some of these companies were before folding.
 
-## Tools
+**4. Group By Queries**
+Aggregated total layoffs by company, location, country, year,
+industry, and company stage to compare which groups were
+affected the most across the full dataset.
 
-MySQL Workbench again. This time the focus was more on GROUP BY, aggregate functions, CTEs, and window functions like DENSE_RANK and SUM() OVER.
+**5. Ranking Companies Per Year**
+Used CTEs and DENSE_RANK window function to find the top 3
+companies with the most layoffs for each year, showing how
+the biggest names shifted from year to year.
 
-## What I did, step by step
+**6. Rolling Total Over Time**
+Used a CTE combined with a SUM window function to calculate
+a running total of layoffs month by month, showing how
+cumulative layoffs built up from March 2020 to March 2023.
 
-**1. Just looking around first**
+## Key Findings
 
-Before asking anything specific, I just selected everything from the clean table to get a feel for it again. Then I started with easy stuff like finding the single biggest layoff number in the whole dataset, and checking the percentage_laid_off column to see how big these layoffs actually were relative to each company's size.
+**Big Tech Dominated the Numbers**
+When you look at the top layoff events, it is mostly the same
+names showing up over and over. Google, Meta, and Amazon are
+at the top whether you are looking at single day events or
+total layoffs across the whole period. The scale of these
+companies means that even one round of cuts from them can
+move the overall numbers significantly.
 
-One thing that stood out was looking at companies where percentage_laid_off was exactly 1, meaning the entire company got laid off. Turns out most of these were startups that shut down completely during this period. When I sorted those by funds raised, some pretty big names showed up, like BritishVolt (an EV company) and Quibi, which had raised close to 2 billion dollars before folding.
+**A Lot of Startups Simply Closed**
+116 companies had a percentage_laid_off of 1, meaning they
+did not just downsize, they shut down completely. Some of
+these were not small operations either. Quibi had raised
+close to 2 billion dollars before calling it quits. Clearly
+having a lot of funding does not always mean you make it.
 
-**2. Group by queries**
+**The US and the Bay Area Took the Biggest Hit**
+The United States had 256,559 layoffs, way ahead of every
+other country. Drilling down into locations, the SF Bay Area
+alone accounted for 125,631 of those. Not exactly shocking
+given how much of the tech industry is concentrated there,
+but the numbers are still pretty staggering.
 
-This is where I started comparing things against each other. I looked at:
+**2022 Was the Worst Year**
+2022 had the most layoffs at 160,661, with 2023 not far
+behind at 125,677. Compare that to 2021 which only had
+15,823 and it is clear something shifted. A lot of companies
+over-hired during the pandemic boom and by 2022 they were
+pulling back hard.
 
-- Which single layoff event was the biggest (one company, one day).
+**Consumer and Retail Were Hit Hard**
+Consumer led all industries with 45,182 layoffs and Retail
+came in second at 43,613. Tech companies tend to get most
+of the attention in layoff news but the data shows the
+impact spread well beyond pure software companies into
+more consumer facing businesses as well.
 
-- Which companies had the highest total layoffs when added up across the whole dataset.
+**Layoffs Grew Steadily Over Time**
+The running total started at 10,128 in March 2020 and
+reached 383,659 by March 2023. It was not a sudden spike,
+it just kept building month after month over three years,
+which tells a different story than the idea of layoffs
+being a short term reaction to one specific event.
 
-- Totals broken down by location, country, industry, and company stage (like Series A or IPO).
-
-- Totals by year, just to see which year hit hardest.
-
-**3. The harder queries**
-
-This part took the longest to figure out. Instead of just looking at which companies had the most layoffs overall, I wanted to know which companies had the most layoffs each year specifically. I used a CTE to first get each company's total layoffs per year, then used DENSE_RANK() with PARTITION BY year on top of that to rank companies within each year and pull out the top 3.
-
-I also wanted to see the trend build up over time instead of just isolated totals, so I did a rolling total of layoffs by month. First I grouped layoffs by month using SUBSTRING on the date, then wrapped that in a CTE so I could run SUM() OVER an ordered window on top of it to get an actual running total instead of just monthly numbers.
-
-## What I found
-
-A few things stood out to me:
-
-- Some companies laid off their entire workforce, mostly early stage startups, even after raising a ton of funding.
-
-- Layoffs weren't evenly spread across years, some years were clearly worse than others.
-
-- Certain industries and locations were hit way harder than others, which makes sense given how concentrated tech companies are in specific cities.
-
-- The rolling total really shows how layoffs picked up pace over time instead of staying flat.
-
-## Things I learned
-
-- Starting an EDA with simple queries first really helps you build intuition before jumping into anything complex.
-
-- DENSE_RANK() combined with PARTITION BY is great for getting a top N per group, like top 3 companies per year in this case.
-
-- Wrapping a query in a CTE is a clean way to reuse an aggregated result if you need to run something like a window function on top of it.
-
-- Rolling totals give a much better sense of trend over time compared to just looking at raw monthly numbers.
-
+## Files
+- `DataExplorationSQL.sql` — SQL queries used for exploration
 
