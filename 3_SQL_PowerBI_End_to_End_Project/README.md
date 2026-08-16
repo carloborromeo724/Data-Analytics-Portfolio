@@ -83,11 +83,7 @@ loyal recurring customers.
 <img width="362" height="266" alt="image" src="https://github.com/user-attachments/assets/3e4e1e99-e3e5-4695-ae9f-355d0cddc863" />
 
 ### Revenue by Hour Table
-The table breaks down revenue by hour across the days of the week, which goes through from day 0 (Sunday) to day 6 (Saturday). Sales 
-start picking up around hour 8 and generally peak during midday between 
-hours 10 and 14, with hour 11 standing out as one of the stronger 
-performing hours across most days. Revenue gradually tapers off as the 
-day moves toward the later evening hours.
+The table breaks down revenue by hour across the days of the week, running from day 0 (Sunday) to day 6 (Saturday). Sales start picking up around hour 8 and gradually build throughout the day. The most notable peak occurs during the evening hours of 17 and 18, where revenue is consistently the highest across most days of the week. Day 1 through day 5 in particular show a strong evening surge, with values climbing well above $1,000 during those hours. Day 0 (Sunday) behaves slightly differently, showing relatively steadier performance across the midday hours compared to the other days. Revenue then tapers off from hour 19 onward as the day winds down.
 
 <img width="343" height="285" alt="image" src="https://github.com/user-attachments/assets/987d5f1f-a3ee-48ae-bd73-29821fe80111" />
 
