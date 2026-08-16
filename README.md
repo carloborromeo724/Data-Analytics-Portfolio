@@ -42,7 +42,8 @@ An end to end project that starts in SQL Server and ends in an interactive Power
 - Ridership and earnings consistently peak between May and September
 - Season 3 is the strongest performer, bringing in 4.9M in revenue
 - 81.17% of riders are registered users rather than casual riders
-- Peak sales hours fall between 10am and 2pm
+- Revenue peaks during the evening hours of 5pm to 6pm across most days 
+  of the week, with Sunday showing a steadier performance throughout midday
 
 **Skills demonstrated:** SQL joins and CTEs, revenue and profit calculations, Power BI dashboard design, seasonal and hourly trend analysis
 
